@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="white-key" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <!-- A smooth white key suppresses white-matted antialiasing. Deep brand
+           pixels stay opaque, and compositing never changes their RGB values. -->
+      <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2 -2 -2 0 6" result="white-key-ramp"/>
+      <feComponentTransfer in="white-key-ramp" result="white-key-alpha">
+        <feFuncA type="gamma" amplitude="1" exponent="2" offset="0"/>
+      </feComponentTransfer>
+      <feComposite in="SourceGraphic" in2="white-key-alpha" operator="in"/>
+    </filter>
+  </defs>
+</svg>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f5f8" />
+    <script>
+      try {
+        var saved = JSON.parse(localStorage.getItem('hanyu-site-preferences-v1') || 'null');
+        var night = saved && saved.theme === 'dark';
+        document.documentElement.dataset.theme = night ? 'dark' : 'light';
+        document.documentElement.style.colorScheme = night ? 'dark' : 'light';
+        document.documentElement.lang = saved && saved.locale === 'en' ? 'en' : 'zh-CN';
+        document.querySelector('meta[name="theme-color"]').content = night ? '#111a27' : '#f3f5f8';
+      } catch (_) {}
+    </script>
+    <meta name="description" content="肖涵瑜的个人主页。浙大城市学院计算机技术硕士研究生，关注计算机视觉、扩散与生成模型、3D 视觉及算法工程。" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preload" href="./fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin />
+    <title>肖涵瑜 Hanyu Xiao · 个人主页</title>
+    <script type="module" crossorigin src="./assets/index-vu-Sh1uH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DSDQSDo4.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
